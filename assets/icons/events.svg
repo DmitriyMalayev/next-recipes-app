@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img">
+  <title>A festive meal</title>
+  <defs>
+    <linearGradient id="events-dome" x1="40" y1="46" x2="96" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE7A0"/>
+      <stop offset="0.45" stop-color="#F6C445"/>
+      <stop offset="1" stop-color="#D99212"/>
+    </linearGradient>
+    <linearGradient id="events-cloth" x1="16" y1="90" x2="112" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9F1"/>
+      <stop offset="1" stop-color="#F0DDB8"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="64" cy="116" rx="46" ry="5" fill="#F6C445" fill-opacity="0.24"/>
+
+  <path d="M14 34c28 12 72 12 100 0" stroke="#F6C445" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M26 36l6 14 6-14" fill="#F0714F"/>
+  <path d="M42 39l6 14 6-14" fill="#F6C445"/>
+  <path d="M58 40l6 14 6-14" fill="#8FBF78"/>
+  <path d="M74 39l6 14 6-14" fill="#F0714F"/>
+  <path d="M90 36l6 14 6-14" fill="#F6C445"/>
+
+  <circle cx="20" cy="58" r="2.2" fill="#F6C445"/>
+  <circle cx="110" cy="52" r="2.4" fill="#F0714F"/>
+  <rect x="106" y="66" width="4" height="4" rx="1" fill="#8FBF78" transform="rotate(20 108 68)"/>
+  <circle cx="16" cy="74" r="1.6" fill="#8FBF78"/>
+  <rect x="112" y="78" width="3.5" height="3.5" rx="0.8" fill="#F6C445" transform="rotate(-18 114 80)"/>
+
+  <rect x="22" y="74" width="7" height="28" rx="2" fill="#FFF7EC"/>
+  <path d="M25.5 74c2.2-7 6.2-8 3.4-15-4.6 5-8.2 7-3.4 15z" fill="#F0714F"/>
+  <path d="M25.5 72c1-3.2 2.4-3.6 1.4-7-2 2.4-3.4 3.4-1.4 7z" fill="#FFE9A0"/>
+
+  <rect x="99" y="78" width="7" height="24" rx="2" fill="#FFF7EC"/>
+  <path d="M102.5 78c2-6 5.4-7 3-13-4 4.4-7.2 6.2-3 13z" fill="#F6C445"/>
+  <path d="M102.5 76c.8-2.8 2-3.2 1.2-6.2-1.8 2-3 2.8-1.2 6.2z" fill="#FFF4CC"/>
+
+  <path d="M34 98c0-26 12-46 30-46s30 20 30 46H34z" fill="url(#events-dome)"/>
+  <path d="M44 86c2-16 8-28 18-32" stroke="#FFF4CC" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="64" cy="50" r="4.2" fill="#FFF7EC"/>
+  <circle cx="64" cy="50" r="2" fill="#F6C445"/>
+
+  <ellipse cx="64" cy="100" rx="50" ry="11" fill="url(#events-cloth)"/>
+  <ellipse cx="64" cy="100" rx="50" ry="11" stroke="#E7D3AA" stroke-width="1.2"/>
+  <path d="M18 104c8 8 84 8 92 0v6c-10 6-82 6-92 0v-6z" fill="#F3E2C4"/>
+</svg>

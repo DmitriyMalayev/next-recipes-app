@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img">
+  <title>Steaming bowl of food</title>
+  <defs>
+    <linearGradient id="meal-bowl" x1="34" y1="56" x2="102" y2="114" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE7A0"/>
+      <stop offset="0.48" stop-color="#F6C445"/>
+      <stop offset="1" stop-color="#D99212"/>
+    </linearGradient>
+    <linearGradient id="meal-broth" x1="36" y1="50" x2="96" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF946C"/>
+      <stop offset="1" stop-color="#E2583A"/>
+    </linearGradient>
+    <linearGradient id="meal-rim" x1="24" y1="46" x2="104" y2="74" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF9EE"/>
+      <stop offset="1" stop-color="#F3E0BC"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="64" cy="114" rx="38" ry="5" fill="#F6C445" fill-opacity="0.28"/>
+
+  <path d="M46 44c1.5-7-3.5-9-1.5-16" stroke="#FFF7EC" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M64 40c2.2-8-4.2-11-1.6-19" stroke="#FFF7EC" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M82 45c1.4-6-3-8-.8-15" stroke="#FFF7EC" stroke-width="2.6" stroke-linecap="round"/>
+
+  <path d="M18 62c2 30 18 46 46 46s44-16 46-46H18z" fill="url(#meal-bowl)"/>
+  <path d="M30 74c3 16 12 28 24 32" stroke="#FFF4CC" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+
+  <ellipse cx="64" cy="62" rx="46" ry="14" fill="url(#meal-rim)"/>
+  <ellipse cx="64" cy="62" rx="46" ry="14" stroke="#E3A41C" stroke-width="1.6"/>
+  <ellipse cx="64" cy="62" rx="34" ry="9.5" fill="url(#meal-broth)"/>
+
+  <path d="M38 57c9-8 20-3 21 6-10 1.5-16 0-21-6z" fill="#97C67E"/>
+  <path d="M46 58c5 2.4 10 3.2 14 1.8" stroke="#5E8A4A" stroke-width="0.9" stroke-linecap="round"/>
+
+  <ellipse cx="70" cy="64" rx="9" ry="4.8" fill="#FFF8EE"/>
+  <circle cx="70" cy="64" r="2.9" fill="#F6C445"/>
+  <circle cx="69" cy="63" r="1" fill="#FFF8EE"/>
+
+  <circle cx="86" cy="59" r="3.3" fill="#E24B38"/>
+  <path d="M84 57.4c1.5-1.4 3.2-1 4.4.4" stroke="#6FA35A" stroke-width="1" stroke-linecap="round"/>
+</svg>

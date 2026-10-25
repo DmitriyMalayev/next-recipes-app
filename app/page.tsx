@@ -1,11 +1,11 @@
 import Link from "next/link";
-
 export default function Home() {
   return (
     <main>
-      <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to my recipes website!</h1>
-      <Link href="/about">About</Link>
+      <h1>Time to get started!</h1>
+      <Link href="/meals">Meals</Link>
+      <Link href="/meals/share">Share Meal</Link>
+      <Link href="/community">Community</Link>
     </main>
   );
 }

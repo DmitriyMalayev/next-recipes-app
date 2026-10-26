@@ -42,6 +42,7 @@ export default function ImageSlideshow() {
   }, [isPaused, currentImageIndex]);
 
   function showPrevious() {
+    console.log("showPrevious");
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );

@@ -5,20 +5,12 @@ import logoImage from "@/assets/logo.png";
 import mealsImage from "@/assets/icons/meal.svg";
 import shareImage from "@/assets/icons/events.svg";
 import communityImage from "@/assets/icons/community.svg";
-import { usePathname } from "next/navigation";
-
-const navLinkClassName =
-  "inline-flex items-center gap-[0.45rem] rounded-full px-3 py-[0.4rem] font-bold whitespace-nowrap text-[#ffc905] no-underline hover:bg-[#f9572a] hover:text-white focus-visible:bg-[#f9572a] focus-visible:text-white aria-[current=page]:bg-[#f9572a] aria-[current=page]:text-white max-[720px]:gap-[0.35rem] max-[720px]:px-2 max-[720px]:py-[0.35rem] max-[720px]:text-[0.95rem]";
+import NavLink from "./nav-link";
 
 const navIconClassName =
   "h-7 w-7 object-contain max-[720px]:h-6 max-[720px]:w-6";
 
 export default function Header() {
-  const pathname = usePathname();
-  const isMeals = pathname === "/meals";
-  const isShare = pathname === "/meals/share";
-  const isCommunity = pathname === "/community";
-
   return (
     <>
       <div className="absolute top-0 left-0 z-[-1] h-80 w-full">
@@ -63,52 +55,43 @@ export default function Header() {
         <nav className="ml-auto max-[720px]:ml-0 max-[720px]:w-full">
           <ul className="m-0 flex list-none flex-wrap items-center justify-end gap-1 p-0 max-[720px]:justify-center">
             <li>
-              <Link
-                href="/meals"
-                aria-current={isMeals ? "page" : undefined}
-                className={navLinkClassName}
-              >
+              <NavLink href="/meals">
                 <Image
                   src={mealsImage.src}
                   alt=""
                   width={28}
                   height={28}
+                  loading="eager"
                   className={navIconClassName}
                 />
                 Meals
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                href="/meals/share"
-                aria-current={isShare ? "page" : undefined}
-                className={navLinkClassName}
-              >
+              <NavLink href="/meals/share">
                 <Image
                   src={shareImage.src}
                   alt=""
                   width={28}
                   height={28}
+                  loading="eager"
                   className={navIconClassName}
                 />
                 Share Meal
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
-                href="/community"
-                aria-current={isCommunity ? "page" : undefined}
-                className={navLinkClassName}
-              >
+              <NavLink href="/community">
                 <Image
                   src={communityImage.src}
                   alt=""
                   width={28}
                   height={28}
+                  loading="eager"
                   className={navIconClassName}
                 />
                 Community
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>

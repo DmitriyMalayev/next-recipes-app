@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import logoImage from "@/assets/logo.png";
 import mealsImage from "@/assets/icons/meal.svg";
@@ -26,28 +27,34 @@ export default function Header() {
           ></path>
         </svg>
       </div>
-      <header>
+      <header className="mx-auto w-full max-w-6xl">
         <Link className="brand" href="/">
-          <img src={logoImage.src} alt="" width={68} height={68} />
+          <Image
+            src={logoImage}
+            alt="Logo"
+            width={68}
+            height={68}
+            loading="eager"
+          />
           Homepage
         </Link>
         <nav>
           <ul>
             <li>
               <Link href="/meals">
-                <img src={mealsImage.src} alt="" width={28} height={28} />
+                <Image src={mealsImage.src} alt="" width={28} height={28} />
                 Meals
               </Link>
             </li>
             <li>
               <Link href="/meals/share">
-                <img src={shareImage.src} alt="" width={28} height={28} />
+                <Image src={shareImage.src} alt="" width={28} height={28} />
                 Share Meal
               </Link>
             </li>
             <li>
               <Link href="/community">
-                <img src={communityImage.src} alt="" width={28} height={28} />
+                <Image src={communityImage.src} alt="" width={28} height={28} />
                 Community
               </Link>
             </li>

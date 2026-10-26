@@ -2,28 +2,32 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import manifest from "@/public/food-images/commercial-free/manifest.json";
 
-import burgerImg from "@/assets/burger.jpg";
-import curryImg from "@/assets/curry.jpg";
-import macncheeseImg from "@/assets/macncheese.jpg";
-import pizzaImg from "@/assets/pizza.jpg";
-import schnitzelImg from "@/assets/schnitzel.jpg";
-import tomatoSaladImg from "@/assets/tomato-salad.jpg";
-
-const images = [
-  { image: burgerImg, alt: "A delicious, juicy burger" },
-  { image: curryImg, alt: "A delicious, spicy curry" },
-  { image: macncheeseImg, alt: "Mac and cheese" },
-  { image: pizzaImg, alt: "A delicious pizza" },
-  { image: schnitzelImg, alt: "A delicious schnitzel" },
-  { image: tomatoSaladImg, alt: "A delicious tomato salad" },
-];
+const images = manifest.images.map((image) => ({
+  src: `/food-images/commercial-free/${image.file}`,
+  alt: image.alt,
+  file: image.file,
+}));
 
 const slideClassName =
   "absolute inset-0 h-full w-full object-cover transition-all duration-500 ease-in-out";
 
 const buttonClassName =
   "absolute top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full bg-[#282c34]/75 text-[#ffc905] shadow-md transition hover:bg-[#f9572a] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffc905]";
+
+function neighboringIndexes(currentIndex: number, count: number) {
+  if (count === 0) {
+    return [];
+  }
+
+  const previousIndex = (currentIndex - 1 + count) % count;
+  const nextIndex = (currentIndex + 1) % count;
+
+  return [previousIndex, currentIndex, nextIndex].filter(
+    (index, position, list) => list.indexOf(index) === position,
+  );
+}
 
 export default function ImageSlideshow() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -42,7 +46,6 @@ export default function ImageSlideshow() {
   }, [isPaused, currentImageIndex]);
 
   function showPrevious() {
-    console.log("showPrevious");
     setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
@@ -52,6 +55,8 @@ export default function ImageSlideshow() {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   }
 
+  const visibleIndexes = neighboringIndexes(currentImageIndex, images.length);
+
   return (
     <div
       className="relative h-100 w-full overflow-hidden rounded-lg shadow-[0_0_0.5rem_rgba(0,0,0,0.5)]"
@@ -60,19 +65,26 @@ export default function ImageSlideshow() {
       aria-label="Food slideshow"
       role="region"
     >
-      {images.map((image, index) => (
-        <Image
-          key={image.alt}
-          src={image.image}
-          className={
-            index === currentImageIndex
-              ? `${slideClassName} z-1 scale-100 translate-x-0 rotate-0 opacity-100`
-              : `${slideClassName} scale-110 -translate-x-4 -rotate-5 opacity-0`
-          }
-          alt={image.alt}
-          priority={index === 0}
-        />
-      ))}
+      {visibleIndexes.map((index) => {
+        const image = images[index];
+        const isCurrent = index === currentImageIndex;
+
+        return (
+          <Image
+            key={image.file}
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="(min-width: 768px) 36rem, 100vw"
+            className={
+              isCurrent
+                ? `${slideClassName} z-1 scale-100 translate-x-0 rotate-0 opacity-100`
+                : `${slideClassName} scale-110 -translate-x-4 -rotate-5 opacity-0`
+            }
+            priority={index === 0}
+          />
+        );
+      })}
       <button
         type="button"
         className={`${buttonClassName} left-3`}

@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="absolute top-0 left-0 z-[-1] h-[320px] w-full">
+      <div className="absolute top-0 left-0 z-[-1] h-80 w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
@@ -56,7 +56,7 @@ export default function Header() {
             width={68}
             height={68}
             loading="eager"
-            className="h-[4.25rem] w-[4.25rem] object-contain drop-shadow-[0_0.35rem_0.6rem_rgba(0,0,0,0.4)]"
+            className="h-17 w-17 object-contain drop-shadow-[0_0.35rem_0.6rem_rgba(0,0,0,0.4)]"
           />
           Homepage
         </Link>

@@ -34,7 +34,7 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
             <Link
               href="/community"
-              className="mx-auto my-3 block w-fit rounded-full bg-[#f9572a] px-5 py-2.5 font-semibold text-[#ffc905] no-underline transition hover:bg-[#fd4715] hover:text-[#f9572a] focus-visible:text-[#f9572a]"
+              className="mx-auto my-3 block w-fit rounded-full bg-[#f9572a] px-5 py-2.5 font-semibold text-[#ffc905] no-underline transition hover:bg-[#fd4715] hover:text-white focus-visible:text-white"
             >
               Join the Community
             </Link>

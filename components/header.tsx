@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logoImage from "@/assets/logo.png";
 import mealsImage from "@/assets/icons/meal.svg";
-import shareImage from "@/assets/icons/events.svg";
+import shareImage from "@/assets/icons/share.svg";
 import communityImage from "@/assets/icons/community.svg";
 import NavLink from "./nav-link";
 

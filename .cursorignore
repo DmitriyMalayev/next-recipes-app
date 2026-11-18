@@ -1,0 +1,7 @@
+# Re-open the gitignored notes folder, then keep only Markdown and PDF files searchable.
+!/notes/
+/notes/*
+!/notes/**/
+!/notes/**/*.md
+!/notes/**/*.markdown
+!/notes/**/*.pdf

@@ -49,5 +49,5 @@ next-env.d.ts
 # npm pack
 *.tgz
 
-# local course notes
 /notes/
+data/meals.db

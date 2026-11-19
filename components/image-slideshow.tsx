@@ -20,13 +20,9 @@ function neighboringIndexes(currentIndex: number, count: number) {
   if (count === 0) {
     return [];
   }
-
   const previousIndex = (currentIndex - 1 + count) % count;
   const nextIndex = (currentIndex + 1) % count;
-
-  return [previousIndex, currentIndex, nextIndex].filter(
-    (index, position, list) => list.indexOf(index) === position,
-  );
+  return [...new Set([previousIndex, currentIndex, nextIndex])];
 }
 
 export default function ImageSlideshow() {

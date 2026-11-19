@@ -1,8 +1,27 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getMealDetails } from "@/lib/meals";
 import { Suspense } from "react";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const meal = getMealDetails(slug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
+}
 
 export default function MealDetailsPage({
   params,
@@ -11,7 +30,6 @@ export default function MealDetailsPage({
 }) {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      {/* Forward the same params Promise. This component never reads it. */}
       <MealDetails params={params} />
     </Suspense>
   );

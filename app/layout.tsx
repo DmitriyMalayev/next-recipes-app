@@ -3,7 +3,11 @@ import Header from "@/components/header";
 export const metadata = {
   title: "Recipes and Foods App",
   description: "A collection of recipes and foods.",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
+
 
 export default function RootLayout({
   children,

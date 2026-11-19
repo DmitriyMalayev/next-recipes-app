@@ -1,6 +1,12 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
 import mealIcon from "@/assets/icons/meal.svg";
+
+export const metadata: Metadata = {
+  title: "Community",
+  description: "Connect and share favorite recipes.",
+};
 import communityIcon from "@/assets/icons/community.svg";
 import eventsIcon from "@/assets/icons/events.svg";
 

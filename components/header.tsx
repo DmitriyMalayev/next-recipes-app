@@ -5,6 +5,7 @@ import mealsImage from "@/assets/icons/meal.svg";
 import shareImage from "@/assets/icons/share.svg";
 import communityImage from "@/assets/icons/community.svg";
 import NavLink from "./nav-link";
+import PathnameDebug from "./pathname-debug";
 
 const navIconClassName =
   "h-7 w-7 object-contain max-[720px]:h-6 max-[720px]:w-6";
@@ -12,6 +13,7 @@ const navIconClassName =
 export default function Header() {
   return (
     <>
+      <PathnameDebug />
       <div className="absolute top-0 left-0 z-[-1] h-80 w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"

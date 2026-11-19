@@ -1,7 +1,13 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { getMeals, Meal } from "@/lib/meals";
+
+export const metadata: Metadata = {
+  title: "Meals",
+  description: "Choose your favorite recipe and cook it yourself.",
+};
 
 function MealCard({ meal }: { meal: Meal }) {
   return (

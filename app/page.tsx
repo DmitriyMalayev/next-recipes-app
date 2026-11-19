@@ -1,5 +1,11 @@
 import ImageSlideshow from "@/components/image-slideshow";
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "World Table",
+  description: "Taste and share food from all over the world.",
+};
 
 const steps = [
   {
@@ -17,7 +23,6 @@ const steps = [
 ];
 
 export default function Home() {
-  
   return (
     <main className="mx-auto my-0 w-full max-w-6xl px-6 text-center">
       <section className="flex flex-col items-center gap-10 py-12 md:flex-row md:gap-16 md:py-16">

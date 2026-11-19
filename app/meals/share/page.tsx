@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Share a Meal",
+  description: "Post a recipe you love so others can cook it too.",
+};
 
 export default function ShareMealPage() {
   return (

@@ -64,8 +64,22 @@ async function MealDetails({ params }: { params: Promise<{ slug: string }> }) {
           <p className="mt-1 text-sm text-[#cfa69b] italic">
             by {meal.creator}
           </p>
+          <p className="m-0 mt-1 text-sm">
+            <a
+              href={`mailto:${meal.creator_email}`}
+              className="text-[#ffc905] no-underline hover:text-[#f9572a]"
+            >
+              {meal.creator_email}
+            </a>
+          </p>
         </header>
-        <p className="m-0 px-6 py-6">{meal.summary}</p>
+        <p className="m-0 px-6 pt-6">{meal.summary}</p>
+        <h2 className="m-0 px-6 pt-6 font-display text-2xl font-bold text-white">
+          Instructions
+        </h2>
+        <p className="m-0 px-6 pt-2 pb-6 whitespace-pre-line">
+          {meal.instructions}
+        </p>
       </article>
       <Link
         href="/meals"

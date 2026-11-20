@@ -10,8 +10,11 @@ export type Meal = {
   title: string;
   image: string;
   summary: string;
+  instructions: string;
   creator: string;
+  creator_email: string;
 };
+
 export function getMeals(): Meal[] {
   return getAllMeals.all() as Meal[];
 }

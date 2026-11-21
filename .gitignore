@@ -49,6 +49,5 @@ next-env.d.ts
 # npm pack
 *.tgz
 
-/notes/
 data/meals.db
-AGENTS.md
+notes/
